@@ -9,8 +9,12 @@ Optimizers/LR/decays used have not been hyperparameter optimized yet. Therefore 
 
 # To Observable
 We encode the training images to our latent space as usual. However we then apply LDA transformations with `n_components=2`. Plotting the transformed data we could observe well formed clusters (refer notebook). Also, there were obviously some overlapping ones, to resolve them, a 3D LDA transformation was obtained. The clusters were amazingly distinguishable with almost 0 overlap.  
-Here is a plot for 2D LDA result. Stay tuned for 3D.  
+## 2D LDA result.  
 ![2D LDA result](https://github.com/Anindya-Prithvi/MNIST_CNNLatentSpace/blob/main/assets/LDA2.png)
+## 3D LDA plot © [Aflah](https://github.com/aflah02/)  
+[3D LDA result - Interactive (Click)](https://anindya-prithvi.github.io/filehost/plotlypage.html)  
+![image](https://user-images.githubusercontent.com/29653551/169578739-40f9c343-d80b-4479-855b-9a4d4062adc5.png)
+
 
 # Observations
 1. We can generate multiple fake samples given the latent space encoding distributed on multivariate gaussian distribution with parameters from MLE estimates of the training data (of a specific class) in latent space. 
