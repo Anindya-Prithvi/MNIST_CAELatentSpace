@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <header>
-        <title>ONNX Runtime JavaScript examples: Quick Start - Web (using bundler)</title>
-    </header>
-    <body>
-        <!-- consume a single file bundle -->
-	<input type="range" id="dim1" min="0" max="1" step="0.0001" name="LatDims"/>
-	<input type="range" id="dim2" min="0" max="1" step="0.0001" name="LatDims"/>
-	<input type="range" id="dim3" min="0" max="1" step="0.0001" name="LatDims"/>
-	<input type="range" id="dim4" min="0" max="1" step="0.0001" name="LatDims"/>
-	<input type="range" id="dim5" min="0" max="1" step="0.0001" name="LatDims"/>
-	<input type="range" id="dim6" min="0" max="1" step="0.0001" name="LatDims"/>
-	<input type="range" id="dim7" min="0" max="1" step="0.0001" name="LatDims"/>
+<header>
+	<title>ONNX Runtime JavaScript examples: Quick Start - Web (using bundler)</title>
+</header>
 
-	<script src="./bundle.min.js"></script>
-    </body>
+<body>
+	<!-- consume a single file bundle -->
+	<input type="range" id="dim1" min="0" max="1" step="0.0001" name="LatDims" />
+	<input type="range" id="dim2" min="0" max="1" step="0.0001" name="LatDims" />
+	<input type="range" id="dim3" min="0" max="1" step="0.0001" name="LatDims" />
+	<input type="range" id="dim4" min="0" max="1" step="0.0001" name="LatDims" />
+	<input type="range" id="dim5" min="0" max="1" step="0.0001" name="LatDims" />
+	<input type="range" id="dim6" min="0" max="1" step="0.0001" name="LatDims" />
+	<input type="range" id="dim7" min="0" max="1" step="0.0001" name="LatDims" />
+	<p>
+		<canvas hidden id="displayHS" width=28 height=28 style="border:1px solid #d3d3d3;">
+			Your browser doesn't support canvas tag, wtf lol
+		</canvas>
+		<script src="./bundle.min.js"></script>
+		<img id="maindisplay" height="300" width="300">
+</body>
+
 </html>
