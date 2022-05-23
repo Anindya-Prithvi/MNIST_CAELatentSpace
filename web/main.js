@@ -1,7 +1,11 @@
 import * as ort from 'onnxruntime-web';
 
 function fetchelementValue(x) {
-	return parseFloat(document.getElementById(`dim${x}`).value)
+	const foundelement = document.getElementById(`dim${x}`);
+	foundelement.addEventListener('click', () => {
+		console.log(`the value ${foundelement.value} for elem ${x}`);
+	});
+	return parseFloat(foundelement.value);
 }
 
 
