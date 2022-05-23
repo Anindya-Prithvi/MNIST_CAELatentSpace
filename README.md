@@ -31,3 +31,4 @@ We encode the training images to our latent space as usual. However we then appl
        6, 2, 8, 2, 2, 2, 6, 2, 2, 2, 2, 2, 2, 8, 3, 2, 
        2, 2, 6, 2, 8, 2, 2, 2, 2, 2, 2, 5, 2, 2, 2, 2, 
        2, 6, 2, 2, 2, 2, 2, 2, 2, 8, 2, 6, 8, 2, 2, 2], dtype=int64)
+4. A demo is now live at [ghpages](https://anindya-prithvi.github.io/MNIST_CAELatentSpace/). Drag the sliders to move around the Latent space.
