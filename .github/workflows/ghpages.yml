@@ -33,10 +33,9 @@ jobs:
       - name: Publish generated content to GitHub Pages
         uses: tsunematsu21/actions-publish-gh-pages@v1.0.1
         with:
-            dir: dist
+            dir: web/dist
             branch: gh-pages
             token: ${{ secrets.ACCESS_TOKEN }}
-        working-directory: ./web
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
