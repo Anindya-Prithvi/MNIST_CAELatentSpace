@@ -1,13 +1,25 @@
 import * as ort from 'onnxruntime-web';
 
+function fetchelementValue(x) {
+	return parseFloat(document.getElementById(`dim${x}`).value)
+}
+
+
+var session = null;
+
 async function main() {
 	try {
-		const datainput = Float32Array.from([1,2,3,4,5,6,7]);
+		const dim7input = [];
+		for (let i = 1; i<=7; i++) {
+			dim7input.push(fetchelementValue(i));
+		}
+
+		const datainput = Float32Array.from(dim7input);
 
 		const tensordata = new ort.Tensor('float32', datainput, [1,7,1,1]);
 		console.log(tensordata);
 
-		const session = await ort.InferenceSession.create('./model.onnx');
+		session = await ort.InferenceSession.create('./model.onnx');
 
 		const feeds = {'onnx::ConvTranspose_0' : tensordata};
 		const results = await session.run(feeds);
@@ -17,5 +29,7 @@ async function main() {
 		console.log(e);
 	}
 }
+
+// add mutation observer
 
 main();
